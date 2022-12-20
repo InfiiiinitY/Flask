@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body                {background-color: #0070b4}
+            h1                  {text-align:center; color:white; font-family:tahoma}
+            h2                  {text-align:center; color:white; font-family:tahoma}
+            form                {text-align:center; font-family:tahoma}
+            p                   {color:white}
+            input[type=submit]  {width:150px; height:50px}
+
+        </style>
+    </head>
+    <body>
+
+        <h1>{{ueberschrift}}</h1>
+        <h2>auf der Hauptseite</h2>
+
+        <form action = "{{url_for('einfuegen')}}" method = "get">
+            <p>Menü:</p>
+            <p><input type = "submit" value = "Person einfügen"></p>
+        </form>
+        <form action = "{{url_for('show')}}" method = "get">
+            <p><input type = "submit" value = "Datenbank zeigen"></p>
+        </form>
+    </body>
+</html>

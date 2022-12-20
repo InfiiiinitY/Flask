@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body    {background-color: #0070b4}
+            h1      {text-align:center; color:white; font-family:tahoma}
+            h2      {text-align:center; color:white; font-family:tahoma}
+            form    {text-align:center}
+            p       {text-align:center; color:white; font-family:tahoma}
+            input[type=text]    {margin-top:10px; margin-bottom:10px}
+            input[type=submit]  {margin:10px; width:150px; height:50px}
+        </style>
+    </head>
+    <body>
+        <h1>{{titel}}</h1>
+        <form action = "{{url_for('eingefuegt')}}" method='post'>
+
+            <input type = 'text' name = 'vorname' placeholder="Vorname" maxlength="20"><br>
+            <input type = 'text' name = 'nachname' placeholder="Nachname" maxlength="20"><br>
+            <input type = 'text' name = 'telefonnr' placeholder="Telefon" maxlength="12"><br>
+            <input type = 'text' name = 'strasse' placeholder="Straße" maxlength="25"><br>
+            <input type = 'text' name = 'hausnr' placeholder="Hausnummer" maxlength="3"><br>
+            <input type = 'text' name = 'wohnort' placeholder="Wohnort" maxlength="20"><br>
+
+            <input type = 'submit' value = 'Senden'>
+        </form>
+        <form action = "{{url_for('index')}}" method="get">
+            <input type = "submit" value = "Zurück">
+        </form>
+    </body>
+</html>

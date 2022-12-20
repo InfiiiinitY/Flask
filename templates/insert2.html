@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body    {background-color: #0070b4}
+            h1      {text-align:center; color:white; font-family:tahoma}
+            h2      {text-align:center; color:white; font-family:tahoma}
+            form    {text-align:center}
+            p       {text-align:center; color:white; font-family:tahoma}
+            input[value=phpMyAdmin]     {background-color: #0070b4; border:none; color: #0070b4}
+        </style>
+  </head>
+  <body>
+        <form action = "{{url_for('index')}}" method = "get">
+            <p>Ok, I added {{vorname}} {{nachname}} to the Database.</p>
+            <p>Open <a href = {{url_for("show")}}>this</a> to see your Database.</p>
+            <p><input type = 'submit' value = 'Zurück'></p>
+        </form>
+        <form action = "http://192.168.0.69/phpmyadmin/index.php" method = "get">
+            <p><input type = "submit" value = "phpMyAdmin"></p>
+        </form>
+  </body>
+</html>
