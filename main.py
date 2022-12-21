@@ -1,12 +1,17 @@
 import mysql.connector
-from flask import Flask, url_for, request, render_template, redirect
-
+from flask import Flask, url_for, request, render_template, redirect, send_from_directory
+import os
 app = Flask(__name__)
 
 
 @app.route("/")
 def index():
     return render_template("index.html", ueberschrift="Willkommen")
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, "static"), "favicon.ico", mimetype="image/vnd.microsoft.icon")
 
 
 @app.route("/einfuegen")
